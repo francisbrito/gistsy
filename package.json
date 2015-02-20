@@ -1,0 +1,19 @@
+{
+  "name": "gistsy",
+  "version": "0.0.1",
+  "description": "A Paste-Bin like pastes service.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/francisbrito/gistsy.git"
+  },
+  "author": "Francis Brito <fr.br94@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francisbrito/gistsy/issues"
+  },
+  "homepage": "https://github.com/francisbrito/gistsy"
+}
