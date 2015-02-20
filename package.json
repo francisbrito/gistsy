@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/francisbrito/gistsy/issues"
   },
-  "homepage": "https://github.com/francisbrito/gistsy"
+  "homepage": "https://github.com/francisbrito/gistsy",
+  "dependencies": {
+    "express": "^4.11.2"
+  }
 }
