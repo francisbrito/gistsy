@@ -15,6 +15,5 @@ app.get('/', function (req, res) {
     res.send('it works!');
 });
 
-app.listen(3000);
+module.exports = app;
 
-console.log('Listening at localhost:3000');
