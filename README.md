@@ -33,5 +33,5 @@ app.listen(3000);
 $ git clone https://francisbrito/gistsy
 $ cd gistsy
 $ npm install
-$ npm run server
+$ npm run start
 ```
