@@ -4,8 +4,37 @@
         <meta charset="UTF-8">
         <title>Gistsy &ndash; Pastes service</title>
         <meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=yes">
+        <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+        <link rel="import" href="bower_components/polymer/polymer.html">
     </head>
-    <body>
-        <h1>It works</h1>
+    <body unresolved>
+        <gist-editor></gist-editor>
+        <polymer-element name="gist-editor">
+            <template>
+                <style>
+                    :host {
+                        display: block;
+                    }
+                </style>
+                <div class="gist-editor-container" vertical layout>
+                    <input type="text" placeholder="Gist description">
+                    <div horizontal layout>
+                        <input type="text" placeholder="File name">
+                        <select>
+                            <option value="txt">Text</option>
+                            <option value="js">JavaScript</option>
+                            <option value="css">CSS</option>
+                            <option value="html">HTML</option>
+                        </select>
+                    </div>
+                    <textarea rows="30"></textarea>
+                </div>
+            </template>
+        </polymer-element>
+        <script>
+        'use strict';
+        /* global Polymer */
+        Polymer('gist-editor', {});
+        </script>
     </body>
 </html>
