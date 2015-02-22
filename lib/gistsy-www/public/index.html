@@ -6,6 +6,12 @@
         <meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=yes">
         <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
         <link rel="import" href="bower_components/polymer/polymer.html">
+        <link rel="import" href="bower_components/paper-input/paper-input.html">
+        <link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+        <link rel="import" href="bower_components/paper-dropdown/paper-dropdown.html">
+        <link rel="import" href="bower_components/core-menu/core-menu.html">
+        <link rel="import" href="bower_components/paper-item/paper-item.html">
+        <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
     </head>
     <body unresolved>
         <gist-editor></gist-editor>
@@ -17,15 +23,19 @@
                     }
                 </style>
                 <div class="gist-editor-container" vertical layout>
-                    <input type="text" placeholder="Gist description">
+                    <paper-input label="Gist description"></paper-input>
                     <div horizontal layout>
-                        <input type="text" placeholder="File name">
-                        <select>
-                            <option value="txt">Text</option>
-                            <option value="js">JavaScript</option>
-                            <option value="css">CSS</option>
-                            <option value="html">HTML</option>
-                        </select>
+                        <paper-input label="File name"></paper-input>
+                        <paper-dropdown-menu>
+                            <paper-dropdown class="dropdown">
+                                <core-menu class="menu">
+                                    <paper-item>Text</paper-item>
+                                    <paper-item>JavaScript</paper-item>
+                                    <paper-item>CSS</paper-item>
+                                    <paper-item>HTML</paper-item>
+                                </core-menu>
+                            </paper-dropdown>
+                        </paper-dropdown-menu>
                     </div>
                     <textarea rows="30"></textarea>
                 </div>
