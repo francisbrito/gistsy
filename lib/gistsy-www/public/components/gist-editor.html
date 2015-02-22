@@ -12,16 +12,15 @@
             }
         </style>
         <div class="gist-editor-container" vertical layout>
-            <paper-input label="Gist description"></paper-input>
+            <paper-input label="{{labels.gistDescription}}"></paper-input>
             <div horizontal layout>
-                <paper-input label="File name"></paper-input>
+                <paper-input label="{{labels.fileName}}"></paper-input>
                 <paper-dropdown-menu>
                     <paper-dropdown class="dropdown">
                         <core-menu class="menu">
-                            <paper-item>Text</paper-item>
-                            <paper-item>JavaScript</paper-item>
-                            <paper-item>CSS</paper-item>
-                            <paper-item>HTML</paper-item>
+                            <template repeat="{{format in formats}}">
+                                <paper-item>{{format}}</paper-item>
+                            </template>
                         </core-menu>
                     </paper-dropdown>
                 </paper-dropdown-menu>
@@ -33,5 +32,16 @@
 <script>
     'use strict';
     /* global Polymer */
-        Polymer('gist-editor', {});
+    Polymer('gist-editor', {
+        labels: {
+            gistDescription: 'Gist description',
+            fileName: 'File name'
+        },
+        formats: [
+            'Text',
+            'JavaScript',
+            'CSS',
+            'HTML'
+        ]
+    });
 </script>
